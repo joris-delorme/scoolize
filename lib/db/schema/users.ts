@@ -6,6 +6,7 @@ import {
     varchar,
 } from "drizzle-orm/mysql-core"
 import type { AdapterAccount } from "@auth/core/adapters"
+import { relations } from "drizzle-orm"
 
 export const users = mysqlTable("user", {
     id: varchar("id", { length: 255 }).notNull().primaryKey(),
@@ -14,6 +15,10 @@ export const users = mysqlTable("user", {
     emailVerified: timestamp("emailVerified", { mode: "date", fsp: 3 }).defaultNow(),
     image: varchar("image", { length: 255 }),
 })
+
+export const userRelations = relations(users, ({ many }) => ({
+    bulletins: many(users)
+}))
 
 export const accounts = mysqlTable(
     "account",

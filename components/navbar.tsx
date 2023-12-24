@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link
             href='/'
             className='flex z-40 font-semibold'>
-            <span>quill.</span>
+            <span>predict.</span>
           </Link>
 
           <MobileNavBar isAuth={!!user} />
@@ -55,12 +55,28 @@ const Navbar = () => {
             ) : (
               <>
                 <Link
+                  href='/about'
+                  className={buttonVariants({
+                    variant: 'ghost',
+                    size: 'sm',
+                  })}>
+                  A Propos
+                </Link>
+                <Link
                   href='/dashboard'
                   className={buttonVariants({
                     variant: 'ghost',
                     size: 'sm',
                   })}>
-                  Dashboard
+                  Solutions
+                </Link>
+                <Link
+                  href='/dashboard'
+                  className={buttonVariants({
+                    variant: 'ghost',
+                    size: 'sm',
+                  })}>
+                  Contact
                 </Link>
 
                 <UserAccountNav

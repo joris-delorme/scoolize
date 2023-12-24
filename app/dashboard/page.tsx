@@ -1,7 +1,7 @@
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
 import { Button } from "@/components/ui/button";
 import { Files } from "lucide-react";
-import UploadButton from "./bultins/upload-button";
+import UploadButton from "./bulletins/upload-button";
 
 const EmptyBulletin = () => {
     return (

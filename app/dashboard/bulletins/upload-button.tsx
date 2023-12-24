@@ -41,12 +41,12 @@ const UploadDropzone = () => {
                         <Cloud className='h-6 w-6 text-zinc-500 mb-2' />
                         <p className='mb-2 text-sm text-zinc-700'>
                             <span className='font-semibold'>
-                                Click to upload
+                                Cliquez pour ajouter
                             </span>{' '}
-                            or drag and drop
+                            ou drag and drop
                         </p>
                         <p className='text-xs text-zinc-500'>
-                            PDF (up to 4MB)
+                            PDF (jusqu'à 4MB)
                         </p>
                     </div>
 
@@ -91,7 +91,7 @@ const UploadButton = () => {
             <DialogTrigger
                 onClick={() => setIsOpen(true)}
                 asChild>
-                <Button>Upload PDF</Button>
+                <Button>Ajouter un bulletin</Button>
             </DialogTrigger>
 
             <DialogContent>

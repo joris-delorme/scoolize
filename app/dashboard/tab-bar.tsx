@@ -19,14 +19,14 @@ const tabBarItems = [
         href: '/profile'
     },
     {
-        name: 'Bulltins',
+        name: 'Bulletins',
         icon: <Files />,
-        href: '/bulltins'
+        href: '/bulletins'
     },
     {
         name: 'Map',
         icon: <Map />,
-        href: ''
+        href: '/map'
     },
     {
         name: 'Like',
