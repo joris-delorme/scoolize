@@ -14,11 +14,6 @@ import { cn } from "@/lib/utils";
 
 const tabBarItems = [
     {
-        name: 'Profile',
-        icon: <User2 />,
-        href: '/profile'
-    },
-    {
         name: 'Bulletins',
         icon: <Files />,
         href: '/bulletins'

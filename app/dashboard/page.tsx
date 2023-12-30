@@ -1,7 +1,6 @@
 import { MaxWidthWrapper } from "@/components/max-width-wrapper";
-import { Button } from "@/components/ui/button";
-import { Files } from "lucide-react";
 import UploadButton from "./bulletins/upload-button";
+import { redirect } from "next/navigation";
 
 const EmptyBulletin = () => {
     return (
@@ -22,9 +21,5 @@ export default function page() {
 
     if (!bulletins.length) return <EmptyBulletin />
 
-    return (
-        <MaxWidthWrapper>
-            <p></p>
-        </MaxWidthWrapper>
-    )
+    return redirect('/dashboard/map')
 }

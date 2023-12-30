@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button'
 import Dropzone, { useDropzone } from 'react-dropzone'
 import { Cloud, File } from 'lucide-react'
 import { toast } from 'sonner'
+import Link from 'next/link'
 
 const UploadDropzone = () => {
 
@@ -96,6 +97,7 @@ const UploadButton = () => {
 
             <DialogContent>
                 <UploadDropzone />
+                <Button className='mx-auto' asChild><Link href="/dashboard/bulletins">Continuer</Link></Button>
             </DialogContent>
         </Dialog>
     )

@@ -9,7 +9,6 @@ import { Button } from './ui/button'
 import { Avatar, AvatarFallback } from './ui/avatar'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Gem } from 'lucide-react'
 import { Icons } from './ui/icons'
 
 interface UserAccountNavProps {
@@ -70,13 +69,6 @@ export const UserAccountNav = async ({
 
         <DropdownMenuItem asChild>
           <Link href='/dashboard'>Dashboard</Link>
-        </DropdownMenuItem>
-
-        <DropdownMenuItem asChild>
-            <Link href='/pricing'>
-              Upgrade{' '}
-              <Gem className='text-blue-600 h-4 w-4 ml-1.5' />
-            </Link>
         </DropdownMenuItem>
 
         <DropdownMenuSeparator />

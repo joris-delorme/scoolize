@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { MaxWidthWrapper } from '@/components/max-width-wrapper'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <span className='font-normal mt-2 block'>On t&apos;aide à y répondre une bonne fois pour toutes, <span className='underline'>simplement</span> et <span className='underline'>efficacement</span> !</span>
       </h1>
       <div className="flex mt-6 gap-4">
-        <Button>Commencer</Button>
+        <Button asChild><Link href="/dashboard">Commencer</Link></Button>
         <Button variant="outline">Je suis une école</Button>
       </div>
     </MaxWidthWrapper>
