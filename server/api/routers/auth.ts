@@ -5,7 +5,7 @@ import {
     publicProcedure
 } from "@/server/api/trpc";
 import bcryptjs from "bcryptjs";
-import { players, users } from "@/lib/db/schema/users";
+import { users } from "@/lib/db/schema/users";
 import { eq } from "drizzle-orm";
 import { createId } from "@paralleldrive/cuid2";
 
@@ -32,26 +32,15 @@ export const authRouter = createTRPCRouter({
             
             type NewUser = typeof users.$inferInsert
             
-            type NewPlayer = typeof players.$inferInsert
 
 
-            const playerID = createId()
             const userID = createId()
 
-            const newPlayer: NewPlayer = {
-                id: playerID,
-                bananas: 0,
-                user_id: userID
-            }
-            
             const newUser: NewUser = {
                 ...input,
                 id: userID,
-                password: hash,
-                player_id: playerID
             }
             
-            await ctx.db.insert(players).values(newPlayer)
             await ctx.db.insert(users).values(newUser)
         }),
 })
