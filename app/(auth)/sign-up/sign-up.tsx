@@ -135,7 +135,7 @@ export function UserForm({ signIn }: { signIn: (formData: FormData) => void }) {
                                 )}
                             />
                         </div>
-                        <Button className="flex gap-2" type="submit" disabled={!form.formState.isValid || signUp.isLoading}>S&apos;inscrire</Button>
+                        <Button className="flex gap-2" type="submit" disabled={!form.formState.isValid}>S&apos;inscrire</Button>
                     </form>
                 </Form>
             </div>
