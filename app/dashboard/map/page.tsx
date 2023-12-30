@@ -1,4 +1,5 @@
 "use client"
+
 import { MapComponent } from "@/components/map";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -12,7 +13,7 @@ import {
 import { GraduationCap, Link2, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function page() {
+export default function Page() {
 
     const [selectedSchool, setSelectedSchool] = useState<ISchool | undefined>()
     const ref = useRef<HTMLButtonElement>(null)

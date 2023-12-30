@@ -47,7 +47,7 @@ const UploadDropzone = () => {
                             ou drag and drop
                         </p>
                         <p className='text-xs text-zinc-500'>
-                            PDF (jusqu'à 4MB)
+                            PDF (jusqu&apos;à 4MB)
                         </p>
                     </div>
 
